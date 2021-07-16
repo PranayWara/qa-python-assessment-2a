@@ -148,7 +148,6 @@ def six(string):
         return True
     else:
         return False
-print (six("pyiscool"))
     # <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
@@ -171,7 +170,15 @@ print (six("pyiscool"))
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+    list1 = [a, b, c]
+    list1.sort()
+    large = list1[-1]
+    middle = list1[1]
+    small = list1[0]
+    if large - middle == middle - small:
+        return True
+    else:
+        return False
 
     # <QUESTION 8>
 
@@ -189,7 +196,14 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+    middle = (int((len(string)))//2)
+    side = num //2
+    higher = middle + side + 1
+    lower = middle - side 
+    if num == 1:
+        return string[0:middle] + string[middle+1 :]
+    else:
+        return string.replace(string[lower:higher], '')
 
     # <QUESTION 9>
 
