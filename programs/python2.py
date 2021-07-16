@@ -30,7 +30,12 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    result =''
+    for char in string:
+        result = result +  (char*3)
+
+    return result
+
 
     # <QUESTION 2>
 
@@ -48,8 +53,10 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
-
+    for x in range(2,num):
+        if num % x == 0:
+            return False
+    return True
     # <QUESTION 3>
 
     # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
@@ -65,7 +72,11 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+    sec = a * 11
+    hun = a * 111
+    thou = a * 1111
+    return a + sec + hun + thou
+
 
     # <QUESTION 4>
 
@@ -94,7 +105,7 @@ def three(a):
     # How would you seperate a string into characters?
 
 def four(string1, string2):
-    return ""
+    return ''.join(''.join(x) for x in zip(string1,string2))
 
     # <QUESTION 5>
 
@@ -111,7 +122,9 @@ def four(string1, string2):
     # The random module contains a function called randint.
 
 def five():
-    return []
+    import random
+    return (random.randrange(100,200, 2)), (random.randrange(100,200, 2)), (random.randrange(100,200, 2)), (random.randrange(100,200, 2)), (random.randrange(100,200, 2))
+
 
     # <QUESTION 6>
 
