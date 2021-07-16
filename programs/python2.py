@@ -143,8 +143,12 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
-
+    string = string.lower()
+    if string [-2:] == 'py':
+        return True
+    else:
+        return False
+print (six("pyiscool"))
     # <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
